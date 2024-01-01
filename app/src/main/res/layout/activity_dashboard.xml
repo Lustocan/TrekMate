@@ -91,16 +91,17 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|center_horizontal"
                 android:gravity="center"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:onClick="openTraining">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/dh_health"/>
+                    android:src="@drawable/dh_flag"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Health"
+                    android:text="Training"
                     android:textSize="16dp"
                     android:textColor="@color/black"/>
 
@@ -130,11 +131,11 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/dh_anal"/>
+                    android:src="@drawable/dh_health"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Statistics"
+                    android:text="Health"
                     android:textSize="16dp"
                     android:textColor="@color/black"/>
 

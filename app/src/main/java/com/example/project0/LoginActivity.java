@@ -12,6 +12,7 @@ import retrofit2.Call;
 
 import com.example.project0.helpers.CookieHelper;
 import com.example.project0.helpers.JwtHelper;
+import com.example.project0.helpers.UserHelper;
 import com.example.project0.model.AuthModel;
 import com.example.project0.retrofit.AuthApi;
 import com.example.project0.retrofit.RetrofitService;
@@ -27,6 +28,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private JwtHelper jh = new JwtHelper();
     private CookieHelper ch = new CookieHelper();
+    private UserHelper uh = new UserHelper();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,7 +66,10 @@ public class LoginActivity extends AppCompatActivity {
                                 Toast.makeText(LoginActivity.this, "Login successfull", Toast.LENGTH_SHORT).show();
                                 jh.saveToken(LoginActivity.this, response.body());
                                 ch.saveCookie(LoginActivity.this, cookie);
-                                startActivity(new Intent(LoginActivity.this,DashboardActivity.class)); // redirecting to DashboardActivity
+                                uh.saveUsername(LoginActivity.this, username);
+
+                                Intent intent = new Intent(LoginActivity.this,DashboardActivity.class);
+                                startActivity(intent); // redirecting to DashboardActivity
                             }
                             else Toast.makeText(LoginActivity.this, "Wrong password or username", Toast.LENGTH_SHORT).show();
                         }

@@ -104,6 +104,9 @@ public class PathDetActivity extends AppCompatActivity {
                 intent.putExtra("start", dataAR.get(i).start);
                 intent.putExtra("end", dataAR.get(i).end);
                 intent.putExtra("length", dataAR.get(i).length);
+                intent.putExtra("latitude", dataAR.get(i).latitude);
+                intent.putExtra("longitude", dataAR.get(i).longitude);
+                intent.putExtra("pointNames", dataAR.get(i).pointNames);
             }
         }
         startActivity(intent);

@@ -16,6 +16,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.example.project0.helpers.CookieHelper;
 import com.example.project0.helpers.JwtHelper;
+import com.example.project0.helpers.UserHelper;
 import com.google.android.material.navigation.NavigationView;
 
 public class DashboardActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -24,11 +25,11 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
     NavigationView navigationView ;
     JwtHelper jwtHelper = new JwtHelper() ;
     CookieHelper cookieHelper = new CookieHelper();
+    UserHelper userHelper = new UserHelper();
     Toolbar toolbar ;
 
-    public void openWeather(View view){
-        startActivity(new Intent(this, WeatherActivity.class));
-    }
+    public void openWeather(View view){ startActivity(new Intent(this, WeatherActivity.class)); }
+    public void openTraining(View view){ startActivity(new Intent(this, StepCounterActivity.class))   ;}
     public void openTrekking(View view){
         startActivity(new Intent(this, TrekkingActivity.class));
     }
@@ -58,6 +59,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 if(item.getItemId()==R.id.nav_logout){
                     jwtHelper.deleteToken(DashboardActivity.this);
                     cookieHelper.deleteCookie(DashboardActivity.this);
+                    userHelper.deleteUsername(DashboardActivity.this);
                     Intent intent=new Intent(DashboardActivity.this,MainActivity.class); // redirecting to DashboardActivity
                     startActivity(intent);
                 }

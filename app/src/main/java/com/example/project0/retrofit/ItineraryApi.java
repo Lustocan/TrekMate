@@ -1,9 +1,6 @@
 package com.example.project0.retrofit;
 
-import com.example.project0.model.AuthModel;
 import com.example.project0.model.ItineraryModel;
-import com.example.project0.model.UserModel;
-
 import java.util.List;
 
 import retrofit2.Call;
