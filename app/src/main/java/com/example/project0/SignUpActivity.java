@@ -1,7 +1,9 @@
 package com.example.project0;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -22,8 +24,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class SignUpActivity extends AppCompatActivity {
-    JwtHelper jw = new JwtHelper();
 
+    private AlertDialog.Builder builder ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,20 +54,37 @@ public class SignUpActivity extends AppCompatActivity {
             userModel.setUsername(username);
             userModel.setPassword(password);
 
-            authapi.sign_up(userModel)
-                    .enqueue(new Callback<UserModel>() {
-                        @Override
-                        public void onResponse(Call<UserModel> call, Response<UserModel> response) {
-                            if(response.isSuccessful()) Toast.makeText(SignUpActivity.this, "Signup successfull", Toast.LENGTH_SHORT).show();
-                            else Toast.makeText(SignUpActivity.this, "Email already exists", Toast.LENGTH_SHORT).show();
-                        }
+            builder = new AlertDialog.Builder(this);
 
-                        @Override
-                        public void onFailure(Call<UserModel> call, Throwable t) {
-                            Toast.makeText(SignUpActivity.this, "Signup failed", Toast.LENGTH_SHORT).show();
-                            Logger.getLogger(MainActivity.class.getName()).log(Level.SEVERE, "Error occurred", t);
-                        }
-                    });
+            builder.setTitle("Terms and Conditions")
+                   .setMessage("By using this app you agree to our Terms and Conditions Privacy Policy.\n\n" +
+                               "With this policy we declare that your data is kept only for the purpose of providing you a better experience through this app.\n\n"+
+                               "Your data will never be voluntarily transferred or sold to other companies.")
+                   .setCancelable(true)
+                   .setPositiveButton("I agree", new DialogInterface.OnClickListener() {
+                       @Override
+                       public void onClick(DialogInterface dialogInterface, int i) {
+                           authapi.sign_up(userModel)
+                                   .enqueue(new Callback<UserModel>() {
+                                       @Override
+                                       public void onResponse(Call<UserModel> call, Response<UserModel> response) {
+                                           if(response.isSuccessful()){
+                                               Toast.makeText(SignUpActivity.this, "Signup successfull", Toast.LENGTH_SHORT).show();
+
+                                               Intent intent = new Intent(SignUpActivity.this ,LoginActivity.class);
+                                               startActivity(intent);
+                                           }
+                                           else Toast.makeText(SignUpActivity.this, "Email already exists", Toast.LENGTH_SHORT).show();
+                                       }
+
+                                       @Override
+                                       public void onFailure(Call<UserModel> call, Throwable t) {
+                                           Toast.makeText(SignUpActivity.this, "Signup failed", Toast.LENGTH_SHORT).show();
+                                           Logger.getLogger(MainActivity.class.getName()).log(Level.SEVERE, "Error occurred", t);
+                                       }
+                                   });
+                       }
+                   }).show();
         });
     }
 

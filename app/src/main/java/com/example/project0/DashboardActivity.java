@@ -29,6 +29,7 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
     Toolbar toolbar ;
 
     public void openWeather(View view){ startActivity(new Intent(this, WeatherActivity.class)); }
+    public void openHealth(View view){ startActivity(new Intent(this, HealthActivity.class)); }
     public void openTraining(View view){ startActivity(new Intent(this, StepCounterActivity.class))   ;}
     public void openTrekking(View view){
         startActivity(new Intent(this, TrekkingActivity.class));

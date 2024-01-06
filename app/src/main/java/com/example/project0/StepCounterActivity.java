@@ -1,7 +1,11 @@
 package com.example.project0;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -13,6 +17,7 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -25,6 +30,7 @@ import com.example.project0.helpers.UserHelper;
 import com.example.project0.model.TrainingModel;
 import com.example.project0.retrofit.RetrofitService;
 import com.example.project0.retrofit.TrainingApi;
+import com.google.android.material.navigation.NavigationView;
 
 import java.util.Date;
 import java.util.Locale;
@@ -34,6 +40,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class StepCounterActivity extends AppCompatActivity implements SensorEventListener {
+
     private UserHelper userHelper = new UserHelper();
     private JwtHelper jh = new JwtHelper();
     private CookieHelper ch = new CookieHelper();
@@ -73,6 +80,7 @@ public class StepCounterActivity extends AppCompatActivity implements SensorEven
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_step_counter);
 
+
         stepCountTextView = findViewById(R.id.stepCount);
         distanceTextView = findViewById(R.id.distance);
         timeTextView = findViewById(R.id.time);
@@ -100,7 +108,7 @@ public class StepCounterActivity extends AppCompatActivity implements SensorEven
                         .setNegativeButton("No", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                startActivity(new Intent(StepCounterActivity.this, StepCounterActivity.class));
+                                startActivity(new Intent(StepCounterActivity.this, DashboardActivity.class));
                             }
                         })
                         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
@@ -108,8 +116,15 @@ public class StepCounterActivity extends AppCompatActivity implements SensorEven
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 String username = userHelper.getUsername(StepCounterActivity.this);
                                 if(username!=null){
-                                    TrainingModel trainingModel = new TrainingModel(username, String.valueOf(timeTextView.getText()), String.valueOf(distanceTextView.getText()),
-                                                                                    String.valueOf(caloriesTextView.getText()), String.valueOf(stepCount), new Date().toString());
+                                    String[] date = new Date().toString().split(" ");
+                                    String datef = "" ;
+                                    for(int k=0; k<date.length; k++){
+                                        if(k!=3&&k!=4){
+                                            datef += date[k]+" ";
+                                        }
+                                    }
+                                    TrainingModel trainingModel = new TrainingModel(null, username, String.valueOf(timeTextView.getText()), String.valueOf(distanceTextView.getText()),
+                                                                                    String.valueOf(caloriesTextView.getText()), String.valueOf(stepCount), datef );
                                     RetrofitService retrofitService = new RetrofitService();
                                     TrainingApi trainingApi = retrofitService.getRetrofit().create(TrainingApi.class);
                                     String jwt = jh.getToken(StepCounterActivity.this);
@@ -131,7 +146,7 @@ public class StepCounterActivity extends AppCompatActivity implements SensorEven
                                     }
 
                                 }
-                                startActivity(new Intent(StepCounterActivity.this, StepCounterActivity.class));
+                                startActivity(new Intent(StepCounterActivity.this, DashboardActivity.class));
                             }
                         }).show();
             }

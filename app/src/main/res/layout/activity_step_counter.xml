@@ -4,9 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
     android:orientation="vertical"
     android:background="@drawable/cut_card_background"
     tools:context=".StepCounterActivity">
+
 
     <androidx.cardview.widget.CardView
         android:layout_width="250dp"

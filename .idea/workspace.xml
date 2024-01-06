@@ -12,42 +12,26 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07a1d1df-948d-4200-8aec-516438be47c5" name="Changes" comment="Fixed the dropdown button bug.">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/project0/StepCounterActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/project0/adapter/PathAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/project0/adapter/PathHolder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/project0/helpers/UserHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/project0/model/TrainingModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/project0/retrofit/TrainingApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/circular.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/custom_progress.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/dh_flag.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/dirwalk.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/run.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_step_counter.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/path_item.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/timer_test.xml" afterDir="false" />
+    <list default="true" id="07a1d1df-948d-4200-8aec-516438be47c5" name="Changes" comment="Creation of CountStep, WeatherForecast, PathActivity finished.">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/project0/HealthActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/project0/adapter/HealthAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/project0/adapter/HealthHolder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_delete.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_health.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/health_list_item.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/training_list_item.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/project0/DashboardActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/project0/DashboardActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/project0/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/project0/LoginActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/project0/PathDetActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/project0/PathDetActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/project0/SelectedPathActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/project0/SelectedPathActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/project0/adapter/WeatherRVAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/project0/adapter/WeatherRVAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/project0/model/ItineraryModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/project0/model/ItineraryModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/project0/retrofit/ItineraryApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/project0/retrofit/ItineraryApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/project0/SignUpActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/project0/SignUpActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/project0/StepCounterActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/project0/StepCounterActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/project0/model/TrainingModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/project0/model/TrainingModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/project0/retrofit/RetrofitService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/project0/retrofit/RetrofitService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/project0/retrofit/UserApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/project0/retrofit/UserApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/dh_anal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/project0/retrofit/TrainingApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/project0/retrofit/TrainingApi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_dashboard.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_dashboard.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_selected_path.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_selected_path.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/city_list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/city_list.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/itinerary_list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/itinerary_list.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_step_counter.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_step_counter.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/user_list_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/user_list_item.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,9 +87,9 @@
       <list>
         <option value="layoutResourceFile_vertical" />
         <option value="resourceFile" />
-        <option value="layoutResourceFile" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="layoutResourceFile" />
       </list>
     </option>
   </component>
@@ -162,6 +146,9 @@
       <recent name="com.example.project0" />
     </key>
     <key name="android.template.-1362701711">
+      <recent name="com.example.project0" />
+    </key>
+    <key name="android.template.-1711475277">
       <recent name="com.example.project0" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -326,7 +313,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698678264424</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Creation of CountStep, WeatherForecast, PathActivity finished.">
+      <created>1704131878729</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1704131878730</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -348,6 +342,7 @@
     <MESSAGE value="Remove JWT button from SignUpActivity." />
     <MESSAGE value="Create a new dashboard with a dropdown menu." />
     <MESSAGE value="Fixed the dropdown button bug." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed the dropdown button bug." />
+    <MESSAGE value="Creation of CountStep, WeatherForecast, PathActivity finished." />
+    <option name="LAST_COMMIT_MESSAGE" value="Creation of CountStep, WeatherForecast, PathActivity finished." />
   </component>
 </project>

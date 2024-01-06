@@ -3,15 +3,17 @@ package com.example.project0.model;
 import java.util.Date;
 
 public class TrainingModel {
-    private String username ;
-    private String time ;
-    private String kilometers ;
-    private String kilocalories ;
-    private String steps ;
-    private String date    ;
+    public String id        ;
+    public String username  ;
+    public String time ;
+    public String kilometers ;
+    public String kilocalories ;
+    public String steps ;
+    public String date    ;
 
-    public TrainingModel(String username, String time, String kilometers,
+    public TrainingModel(String id , String username, String time, String kilometers,
                          String kilocalories, String steps, String date){
+        this.id = id ;
         this.username = username ;
         this.time = time ;
         this.kilocalories = kilocalories ;
