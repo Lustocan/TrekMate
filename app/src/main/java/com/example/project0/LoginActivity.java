@@ -39,7 +39,6 @@ public class LoginActivity extends AppCompatActivity {
     public void openSignUp(View view){
         startActivity(new Intent(this, SignUpActivity.class));
     }
-    public void openUserList(View view){startActivity(new Intent(this, UserListActivity.class));}
 
     private void login(){
         EditText inputUsrn = findViewById(R.id.form_textFieldUsername);

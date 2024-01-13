@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void openUserList(View view){startActivity(new Intent(this, UserListActivity.class));}
     private void authBranch(){
         RetrofitService retrofitService = new RetrofitService();
         UserApi userapi = retrofitService.getRetrofit().create(UserApi.class);

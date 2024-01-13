@@ -18,7 +18,7 @@
         android:orientation="vertical"
         android:gravity="center"
         android:layout_above="@id/card_view"
-        android:padding= "88dp">
+        android:layout_marginBottom="55dp">
 
         <ImageView
             android:layout_width="wrap_content"
