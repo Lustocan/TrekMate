@@ -20,7 +20,7 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardImage"
-        android:layout_width="380dp"
+        android:layout_width="335dp"
         android:layout_height="200dp"
         android:layout_gravity="center"
         app:cardCornerRadius="20dp"
@@ -29,7 +29,7 @@
 
         <ImageView
             android:id="@+id/detailImage"
-            android:layout_width="380dp"
+            android:layout_width="335dp"
             android:layout_height="200dp"
             android:layout_gravity="center"
             android:src="@drawable/vicenza"

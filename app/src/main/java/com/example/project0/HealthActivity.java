@@ -14,22 +14,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.project0.adapter.HealthAdapter;
-import com.example.project0.adapter.UserAdapter;
 import com.example.project0.helpers.CookieHelper;
 import com.example.project0.helpers.JwtHelper;
 import com.example.project0.helpers.UserHelper;
 import com.example.project0.model.TrainingModel;
-import com.example.project0.model.UserModel;
-import com.example.project0.retrofit.AuthApi;
 import com.example.project0.retrofit.RetrofitService;
 import com.example.project0.retrofit.TrainingApi;
-import com.example.project0.retrofit.UserApi;
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.List;

@@ -14,7 +14,6 @@
         android:layout_height="match_parent"
         >
 
-
         <TextView
             android:id="@+id/TrList_date"
             android:layout_width="wrap_content"
@@ -29,7 +28,7 @@
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:layout_marginTop="9dp"
-            android:layout_marginStart="340dp"
+            android:layout_marginStart="305dp"
             android:onClick="deleteTraining"
             >
             <ImageView
@@ -43,15 +42,12 @@
                 android:id="@+id/TrList_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="klcal"
                 android:textSize="16sp"
                 android:layout_marginTop="74dp"
                 android:layout_marginStart="10dp"
                 android:visibility="invisible"
-            />
+                />
         </RelativeLayout>
-
-
 
         <TextView
             android:id="@+id/TrList_time"
@@ -79,7 +75,8 @@
             android:textSize="16sp"
             android:layout_marginTop="74dp"
             android:layout_marginStart="10dp"
-            android:layout_alignTop="@+id/TrList_date"/>
+            android:layout_alignTop="@+id/TrList_date"
+            android:paddingBottom="5dp"/>
 
 
     </RelativeLayout>

@@ -18,7 +18,7 @@
         android:orientation="vertical"
         android:gravity="center"
         android:layout_above="@id/card_view"
-        android:padding= "28dp">
+        android:padding= "88dp">
 
         <ImageView
             android:layout_width="wrap_content"
@@ -101,23 +101,9 @@
                 android:drawableEnd="@drawable/password_icon"
                 android:inputType="textPassword" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:alpha="0.7"
-                    android:text="Remember me" />
-
-
-            </RelativeLayout>
-
             <View
                 android:layout_width="wrap_content"
-                android:layout_height="10dp" />
+                android:layout_height="40dp" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/login_button"
@@ -167,8 +153,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:alpha="0.9"
-                    android:text="Don't you have an account?"
-                    android:textStyle="bold" />
+                    android:text="Don't you have an account?" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -179,11 +164,6 @@
                     android:textStyle="bold"/>
 
             </LinearLayout>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="UsersList"
-                android:onClick="openUserList"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </RelativeLayout>

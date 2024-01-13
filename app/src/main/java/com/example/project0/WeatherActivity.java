@@ -129,7 +129,6 @@ public class WeatherActivity extends AppCompatActivity {
                     }
                     else{
                         Log.d("TAG", "CITY NOT FOUND");
-                        Toast.makeText(this, "User City Not Found..", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
